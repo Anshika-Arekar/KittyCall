@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-retro: "MS Sans Serif", "Geneva", "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #F6EEDC;
+  color: #292631;
+  font-family: var(--font-retro);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Y2K Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF8E8;
+  border-left: 2px solid #292631;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F3A6B8;
+  border: 2px solid #292631;
+  box-shadow: inset 1px 1px 0px #FFF8E8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F08080;
+}
+
+/* Y2K Bevel button tactile utilities */
+.y2k-pressable {
+  transition: transform 0.05s ease, box-shadow 0.05s ease;
+}
+
+.y2k-pressable:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #292631 !important;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
