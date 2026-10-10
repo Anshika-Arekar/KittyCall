@@ -1,11 +1,11 @@
 import React from 'react';
-import { PixelIcon } from './PixelIcon';
+import { PixelIcon, type PixelIconName } from './PixelIcon';
 
 interface WindowHeaderProps {
   title: string;
   onClose?: () => void;
   onMinimize?: () => void;
-  iconName?: 'cat' | 'paw' | 'heart' | 'star' | 'chat';
+  iconName?: PixelIconName;
   className?: string;
   variant?: 'pink' | 'purple' | 'blue' | 'coral' | 'cream' | 'green';
 }
